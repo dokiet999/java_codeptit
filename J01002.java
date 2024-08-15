@@ -1,6 +1,6 @@
 package jv;
 import java.util.*;
-
+//hehe
 public class J01002 {
 	public static Scanner ip = new Scanner(System.in);
 	public static void main(String[] args) {
