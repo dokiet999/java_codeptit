@@ -1,8 +1,11 @@
 package jv;
+
 import java.util.Scanner;
 
 public class J01004 {
+	
 	public static Scanner ip = new Scanner(System.in);
+	
 	static boolean checkPrime(int x) {
 		if(x < 2) {
 			return false;
@@ -13,6 +16,7 @@ public class J01004 {
 		}
 		return true;
 	}
+	
 	public static void main(String [] args) {
 		int t;
 		t = ip.nextInt();
