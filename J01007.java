@@ -1,8 +1,13 @@
 package jv;
+
 import java.util.Scanner;
+
 public class J01007 {
+	
 	public static Scanner sc = new Scanner(System.in);
+	
 	public static long[] fibonacci = new long[100];
+	
 	public static void initialize() {
 		fibonacci[0] = 0;
 		fibonacci[1] = 1;
@@ -10,15 +15,17 @@ public class J01007 {
 			fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 		}
 	}
+	
 	public static boolean checkFibo(long n) {
 		for(long i : fibonacci) {
 			if(i == n) {
-				return true;
+			return true;
 			}
 		}
 		return false;
 		
 	}
+	
 	public static void main(String[] args) {
 		int t = sc.nextInt();
 		initialize();
