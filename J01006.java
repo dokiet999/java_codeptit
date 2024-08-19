@@ -1,6 +1,9 @@
 package jv;
+
 import java.util.Scanner;
+
 public class J01006 {
+	
 	static long fiBo(int n) {
 		long first = 0;
 		long second = 1;
@@ -12,6 +15,7 @@ public class J01006 {
 		}
 		return second;
 	}
+	
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		int t = ip.nextInt();
@@ -19,7 +23,6 @@ public class J01006 {
 			t--;
 			int n = ip.nextInt();
 			System.out.println(fiBo(n));
-			
 		}
 		
 	}
