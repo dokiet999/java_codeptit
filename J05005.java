@@ -56,14 +56,19 @@ class Students implements Comparable<Students> {
 		return "";
 	}
 
+	public Float getGpa() {
+		return gpa;
+	}
+
 	public String toString() {
 		return msv() + " " + name + " " + classroom + " " + formatDate() + " " + String.format("%.2f", gpa);
 	}
 
+	@Override
 	public int compareTo(Students o) {
-		return (int) (o.gpa - this.gpa);
+
+		return -(this.getGpa().compareTo(o.getGpa()));
 	}
-	
 
 }
 
@@ -73,15 +78,15 @@ public class J05005 {
 	public static void main(String[] args) {
 		int n = sc.nextInt();
 		sc.nextLine();
-		List<Students> list = new ArrayList<>(n);
+		List<Students> list = new ArrayList<>();
 		for (int i = 0; i < n; i++) {
 			String name = sc.nextLine();
 			String classroom = sc.nextLine();
 			String dateOBirth = sc.nextLine();
 			float gpa = sc.nextFloat();
 			sc.nextLine();
-			Students student = new Students(i + 1, name, classroom, dateOBirth, gpa);
-			list.add(student);
+			Students p = new Students(i + 1, name, classroom, dateOBirth, gpa);
+			list.add(p);
 		}
 		Collections.sort(list);
 		for (Students i : list) {
